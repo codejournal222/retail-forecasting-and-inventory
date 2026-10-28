@@ -1,0 +1,16 @@
+{
+  "lead_days": 7,
+  "review_days": 7,
+  "future_days": 14,
+  "n_each_stratum": 3,
+  "cancellation_hours": 24,
+  "exclude_last_day": true,
+  "closed_weekdays": [5],
+  "holding_rate": 0.2,
+  "shortage_fraction": 0.5,
+  "order_cost": 5.0,
+  "initial_stock_days": 14,
+  "stock_overrides": {},
+  "products": [],
+  "unknown_day_policy": "zero"
+}

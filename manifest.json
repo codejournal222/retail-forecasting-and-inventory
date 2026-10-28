@@ -1,0 +1,421 @@
+{
+  "version": "2.1.0",
+  "holt_winters_reference": {
+    "status": "PASS",
+    "comparisons_run": 288,
+    "max_absolute_difference": 5.684341886080801e-13,
+    "reference": "statsmodels ETS(A,A,A), known matching initialization, no optimization",
+    "statsmodels_version": "0.14.6",
+    "parameter_mapping": "ETS alpha=alpha; ETS beta=alpha*beta; ETS gamma=(1-alpha)*gamma",
+    "interpretation": "Numerical recurrence validation; not evidence of predictive superiority."
+  },
+  "calendar_sensitivity": {
+    "status": "COMPLETED",
+    "unknown_dates": 16,
+    "test_unknown_dates": [
+      "2011-08-29"
+    ],
+    "validation_origins_used": [
+      "2011-06-10",
+      "2011-06-24",
+      "2011-07-08",
+      "2011-07-22"
+    ],
+    "comparison": "Same products/origins; both scenarios scored only on dates with source coverage or configured closure.",
+    "limitation": "Alternative is a sensitivity assumption, not recovered demand. No inventory outcomes are claimed for imputed demand."
+  },
+  "workbook_schema_version": 2,
+  "provenance": {
+    "input_name": "Online Retail.xlsx",
+    "sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+    "reconstructed_from_cleaned_workbook": false,
+    "provenance_limit": "Raw input supplied."
+  },
+  "config": {
+    "lead_days": 7,
+    "review_days": 7,
+    "future_days": 14,
+    "n_each_stratum": 3,
+    "cancellation_hours": 24,
+    "exclude_last_day": true,
+    "closed_weekdays": [
+      5
+    ],
+    "holding_rate": 0.2,
+    "shortage_fraction": 0.5,
+    "order_cost": 5.0,
+    "initial_stock_days": 14,
+    "stock_overrides": {},
+    "products": [],
+    "unknown_day_policy": "zero"
+  },
+  "reporting_delay_days": 1,
+  "analysis_start": "2010-12-01",
+  "analysis_end": "2011-12-08",
+  "excluded_terminal_date": "2011-12-09",
+  "selection_cutoff": "2011-06-09",
+  "validation_origins": [
+    "2011-06-10",
+    "2011-06-24",
+    "2011-07-08",
+    "2011-07-22"
+  ],
+  "test_windows": [
+    {
+      "Fold": 1,
+      "Start": "2011-08-05",
+      "End": "2011-09-01"
+    },
+    {
+      "Fold": 2,
+      "Start": "2011-09-30",
+      "End": "2011-10-27"
+    },
+    {
+      "Fold": 3,
+      "Start": "2011-11-11",
+      "End": "2011-12-08"
+    }
+  ],
+  "parameters": {
+    "84077": {
+      "Moving average": {
+        "params": {
+          "window": 7
+        },
+        "validation_mae": 89.95833333333333,
+        "safety_stock": 0.0,
+        "calibration_n": 4
+      },
+      "Seasonal naive": {
+        "params": {},
+        "validation_mae": 133.30357142857142,
+        "safety_stock": 0.0,
+        "calibration_n": 4
+      },
+      "Holt-Winters": {
+        "params": {
+          "alpha": 0.5,
+          "beta": 0.0,
+          "gamma": 0.3
+        },
+        "validation_mae": 92.6713623820953,
+        "safety_stock": 1545.3857589712788,
+        "calibration_n": 4
+      },
+      "Random Forest": {
+        "params": {
+          "depth": null,
+          "leaf": 5
+        },
+        "validation_mae": 107.72242075386849,
+        "safety_stock": 70.88235807583368,
+        "calibration_n": 4
+      }
+    },
+    "85123A": {
+      "Moving average": {
+        "params": {
+          "window": 7
+        },
+        "validation_mae": 59.26785714285713,
+        "safety_stock": 857.9000000000002,
+        "calibration_n": 4
+      },
+      "Seasonal naive": {
+        "params": {},
+        "validation_mae": 72.08928571428571,
+        "safety_stock": 857.9000000000002,
+        "calibration_n": 4
+      },
+      "Holt-Winters": {
+        "params": {
+          "alpha": 0.5,
+          "beta": 0.0,
+          "gamma": 0.1
+        },
+        "validation_mae": 67.9819943895014,
+        "safety_stock": 1168.319600855087,
+        "calibration_n": 4
+      },
+      "Random Forest": {
+        "params": {
+          "depth": 6,
+          "leaf": 3
+        },
+        "validation_mae": 73.21178863009638,
+        "safety_stock": 0.0,
+        "calibration_n": 4
+      }
+    },
+    "21212": {
+      "Moving average": {
+        "params": {
+          "window": 28
+        },
+        "validation_mae": 70.32440476190476,
+        "safety_stock": 495.95,
+        "calibration_n": 4
+      },
+      "Seasonal naive": {
+        "params": {},
+        "validation_mae": 84.30357142857143,
+        "safety_stock": 585.1000000000001,
+        "calibration_n": 4
+      },
+      "Holt-Winters": {
+        "params": {
+          "alpha": 0.5,
+          "beta": 0.0,
+          "gamma": 0.3
+        },
+        "validation_mae": 71.56700020297738,
+        "safety_stock": 1244.8538772965323,
+        "calibration_n": 4
+      },
+      "Random Forest": {
+        "params": {
+          "depth": 6,
+          "leaf": 3
+        },
+        "validation_mae": 96.52432127624118,
+        "safety_stock": 35.81853087578139,
+        "calibration_n": 4
+      }
+    },
+    "22701": {
+      "Moving average": {
+        "params": {
+          "window": 7
+        },
+        "validation_mae": 0.7023809523809523,
+        "safety_stock": 10.400000000000002,
+        "calibration_n": 4
+      },
+      "Seasonal naive": {
+        "params": {},
+        "validation_mae": 0.6428571428571429,
+        "safety_stock": 10.400000000000002,
+        "calibration_n": 4
+      },
+      "Holt-Winters": {
+        "params": {
+          "alpha": 0.5,
+          "beta": 0.05,
+          "gamma": 0.3
+        },
+        "validation_mae": 0.6772931167395081,
+        "safety_stock": 10.382077675354598,
+        "calibration_n": 4
+      },
+      "Random Forest": {
+        "params": {
+          "depth": 10,
+          "leaf": 2
+        },
+        "validation_mae": 2.706275155895692,
+        "safety_stock": 0.0,
+        "calibration_n": 4
+      }
+    },
+    "22319": {
+      "Moving average": {
+        "params": {
+          "window": 28
+        },
+        "validation_mae": 2.5,
+        "safety_stock": 16.200000000000003,
+        "calibration_n": 4
+      },
+      "Seasonal naive": {
+        "params": {},
+        "validation_mae": 4.071428571428571,
+        "safety_stock": 9.600000000000009,
+        "calibration_n": 4
+      },
+      "Holt-Winters": {
+        "params": {
+          "alpha": 0.2,
+          "beta": 0.05,
+          "gamma": 0.1
+        },
+        "validation_mae": 4.480516304908155,
+        "safety_stock": 10.11246940378671,
+        "calibration_n": 4
+      },
+      "Random Forest": {
+        "params": {
+          "depth": null,
+          "leaf": 5
+        },
+        "validation_mae": 4.031269174190656,
+        "safety_stock": 0.0,
+        "calibration_n": 4
+      }
+    },
+    "22587": {
+      "Moving average": {
+        "params": {
+          "window": 7
+        },
+        "validation_mae": 0.18452380952380953,
+        "safety_stock": 2.0,
+        "calibration_n": 4
+      },
+      "Seasonal naive": {
+        "params": {},
+        "validation_mae": 0.19642857142857142,
+        "safety_stock": 2.0,
+        "calibration_n": 4
+      },
+      "Holt-Winters": {
+        "params": {
+          "alpha": 0.5,
+          "beta": 0.05,
+          "gamma": 0.3
+        },
+        "validation_mae": 0.1759101196299775,
+        "safety_stock": 1.9418977911937798,
+        "calibration_n": 4
+      },
+      "Random Forest": {
+        "params": {
+          "depth": null,
+          "leaf": 5
+        },
+        "validation_mae": 1.4759878790751897,
+        "safety_stock": 0.0,
+        "calibration_n": 4
+      }
+    },
+    "44234": {
+      "Moving average": {
+        "params": {
+          "window": 28
+        },
+        "validation_mae": 1.6964285714285714,
+        "safety_stock": 30.300000000000008,
+        "calibration_n": 4
+      },
+      "Seasonal naive": {
+        "params": {},
+        "validation_mae": 1.7321428571428572,
+        "safety_stock": 32.20000000000001,
+        "calibration_n": 4
+      },
+      "Holt-Winters": {
+        "params": {
+          "alpha": 0.5,
+          "beta": 0.05,
+          "gamma": 0.3
+        },
+        "validation_mae": 1.8840717972268146,
+        "safety_stock": 23.000242367768983,
+        "calibration_n": 4
+      },
+      "Random Forest": {
+        "params": {
+          "depth": null,
+          "leaf": 5
+        },
+        "validation_mae": 2.4696349026571585,
+        "safety_stock": 25.065049731722535,
+        "calibration_n": 4
+      }
+    },
+    "75178": {
+      "Moving average": {
+        "params": {
+          "window": 7
+        },
+        "validation_mae": 0.017857142857142856,
+        "safety_stock": 0.7000000000000002,
+        "calibration_n": 4
+      },
+      "Seasonal naive": {
+        "params": {},
+        "validation_mae": 0.017857142857142856,
+        "safety_stock": 0.7000000000000002,
+        "calibration_n": 4
+      },
+      "Holt-Winters": {
+        "params": {
+          "alpha": 0.5,
+          "beta": 0.05,
+          "gamma": 0.1
+        },
+        "validation_mae": 0.12203563533376403,
+        "safety_stock": 0.0,
+        "calibration_n": 4
+      },
+      "Random Forest": {
+        "params": {
+          "depth": 6,
+          "leaf": 3
+        },
+        "validation_mae": 2.086392564838435,
+        "safety_stock": 0.0,
+        "calibration_n": 4
+      }
+    },
+    "21807": {
+      "Moving average": {
+        "params": {
+          "window": 7
+        },
+        "validation_mae": 1.5,
+        "safety_stock": 36.0,
+        "calibration_n": 4
+      },
+      "Seasonal naive": {
+        "params": {},
+        "validation_mae": 1.5,
+        "safety_stock": 36.0,
+        "calibration_n": 4
+      },
+      "Holt-Winters": {
+        "params": {
+          "alpha": 0.2,
+          "beta": 0.0,
+          "gamma": 0.1
+        },
+        "validation_mae": 1.3571428571428572,
+        "safety_stock": 36.0,
+        "calibration_n": 4
+      },
+      "Random Forest": {
+        "params": {
+          "depth": 10,
+          "leaf": 2
+        },
+        "validation_mae": 1.9739243197278913,
+        "safety_stock": 27.973047619047623,
+        "calibration_n": 4
+      }
+    }
+  },
+  "calendar_unknown_zero_days": 16,
+  "code_sha256": {
+    "app.py": "296ca12adea6156e793190a82a984b5587fdd15425d6757223ffec005d05ddde",
+    "calendar_review.py": "bee707020c9d347ab4bd07165443805f1adac31bb100ec87484e463e5ebf83cb",
+    "cleaning.py": "44202349d564715509107e5954ffb2e1964d110fc22b5b403446b4d44efc31b4",
+    "forecasting.py": "43af9a050b4cda0aded317e60a7c01ca78269f4a8a7718f72e6cef33dd832cb1",
+    "inventory.py": "c3e1a1800e2e9ab52d21b11187c61cb10ee318ba7993a8540145a151b8e88dc9",
+    "local_excel.py": "954e6411e0ca70cf4e042f51b9f27984a459b20cbda2bfd9f08fb65d8152ab6c",
+    "pipeline.py": "8b9c79a4bcec440f8ec512f0f44615e9b49c5a927b65262c59ffe939476763e6",
+    "reference_checks.py": "214ea75be77ad3f52cb8637550d661988ebceb26b6cf01e5897bed171ee900be",
+    "reporting.py": "60d4ffe5509727b28822553d067e627e4c31472d9cbf8e2400ac1e764f854d75",
+    "run_tests.py": "c83835a7cf78a141a5de73e09d326c229119fb9da679ee45d0f8ce8a673b7e64",
+    "test_pipeline.py": "c6792a738f2a1ddbb7fccbd927b4e4795f9981163eaa1f2c6f47894dca6e074f",
+    "test_quality.py": "3b7bc54f553031b884e99faccb1204d3301ce6a7f04189a660473aa90a527308",
+    "verify_outputs.py": "63cb0fb1186e869b91b04ad55f9d8c9e5c4bb7735f88b4dad7f464409d478463",
+    "workbook_checks.py": "27217f3046d7b963fe6b42ae2f979fe600a65a9d20a0bff8c70fbd9255a03919"
+  },
+  "environment": {
+    "python": "3.11.9",
+    "pandas": "2.3.1",
+    "numpy": "2.3.2",
+    "sklearn": "1.9.0",
+    "scipy": "1.17.0"
+  }
+}

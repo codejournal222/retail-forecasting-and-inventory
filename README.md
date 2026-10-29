@@ -31,8 +31,8 @@ intermittent), chosen from training data only.
 Requires Python 3.12
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/codejournal222/retail-forecasting-and-inventory.git
+cd retail-forecasting-and-inventory
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\Activate.ps1
 python -m pip install -r requirements-tested.txt   # exact tested versions
